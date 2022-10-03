@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <common>
+        <environmentConfiguration>false</environmentConfiguration>
+        <skipPassedScreenshot>true</skipPassedScreenshot>
+        <skipLogScreenshot>false</skipLogScreenshot>
+        <!--<threadCount>5</threadCount>-->
+        <!--<parallel>methods</parallel>-->
+
+        <logging>
+            <htmllogger>
+                <level>TECHNICAL</level>
+            </htmllogger>
+            <console>
+                <level>TECHNICAL</level>
+            </console>
+        </logging>
+    </common>
+
+    <accountPool>
+        <useAccountPool>false</useAccountPool>
+    </accountPool>
+
+<!--    <selenium>-->
+<!--        <useRemote>false</useRemote>-->
+<!--        <url>http://10.62.184.77:7557/wd/hub</url>-->
+<!--        <waitForElementTimeout>40000</waitForElementTimeout>-->
+<!--    </selenium>-->
+
+    <replay>
+        <instant>
+            <enabled>true</enabled>
+            <failed>
+                <count>1</count>
+                <patternsFile>patterns.txt</patternsFile>
+                <addExceptionToMessage>true</addExceptionToMessage>
+            </failed>
+        </instant>
+    </replay>
+
+</config>
