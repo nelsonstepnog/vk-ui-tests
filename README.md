@@ -13,7 +13,7 @@ This project contains several UI tests for [vk.com](https://vk.com) web service.
 
 ### Common information 
 ##### VK UI Tests prerequisites:
-To start you must create "sre.secrets.properties" file or rename "vk.secrets.template.properties" template file 
+To start you must create "sre.secrets.properties" file or rename "template.vk.secrets.properties" template file 
 in root dir of "vk-ui-tests" project. Set your credentials in "login" and "password" fields.
 
 ```sh

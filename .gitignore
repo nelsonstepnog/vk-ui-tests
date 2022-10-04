@@ -14,6 +14,5 @@ test-output/
 tl_export/
 !/pom.xml
 !/vk-ui-tests/pom.xml
-/vk.secrets.yml
-/vk.secrets.*.properties
+/vk.secrets.*
 /volume/
