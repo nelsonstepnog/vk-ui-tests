@@ -45,7 +45,7 @@ test {
     def commonFile = 'vk.browser.' + browser + '.properties'
     def secretsFile = 'vk.secrets.properties'
     def maxFailuresValue = 8
-    def maxRetriesValue = 0
+    def maxRetriesValue = 1
 
     System.setProperty("java.awt.headless", "false")
     systemProperties System.properties
