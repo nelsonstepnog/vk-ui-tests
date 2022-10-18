@@ -1,4 +1,4 @@
-package com.vk.qa.vkontakte.Chats;
+package com.vk.qa.vkontakte.chats;
 
 import com.vk.qa.elements.MenuNavigation;
 import com.vk.qa.pages.AudioPage;
@@ -25,11 +25,10 @@ public class Chats extends CommonTest {
     private final String UPLOAD_AUDIO_PATH = "attachments/Linkin Park - With You(cut).mp3";
     private final String AUDIO_TITLE = "Без названия";
 
-    private String chatName;
-
-    private MenuNavigation menuNavigation;
     private ChatsPage chatsPage;
     private AudioPage audioPage;
+    private MenuNavigation menuNavigation;
+    private String chatName;
 
     @BeforeClass(alwaysRun = true)
     public void initPages() {
