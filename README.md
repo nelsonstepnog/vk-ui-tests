@@ -12,7 +12,7 @@ This project contains several UI tests for [vk.com](https://vk.com) web service.
 ![Plugin run tests review](project-docs/adarshr-cmd-plugin.png)
 
 ### Common information 
-##### VK UI Tests prerequisites:
+#### VK UI Tests prerequisites:
 To start you must create "sre.secrets.properties" file or rename "template.vk.secrets.properties" template file 
 in root dir of "vk-ui-tests" project. Set your credentials in "login" and "password" fields.
 
@@ -29,7 +29,7 @@ userPassword: YourSecretPswd
 
 ### Configuration
 
-##### System variables 
+#### System variables 
 | Variable | Default | Definition |
 | -------- | ------- | ---------- |
 | -Denv | PRO | VK instance for testing. Fill required settings. Run test with **-Denv**=pro or **-Denv**=stage |
@@ -40,13 +40,14 @@ userPassword: YourSecretPswd
 Variables can be set in 'VM options'  (IDEA / menu Run / Edit Configuration / Gradle)
 
 ### Running from Terminal
+#### ATTENTION! When tests running in parallel, fails due to captcha are often observed.
 Base running(all tests) with headless mode, for example:
 ```sh
-$ ./gradlew test -Denv=pro -Dthreads=2 -Dbrowser=chrome -Dchromeoptions.args='--headless, --disable-gpu, --no-sandbox'
+$ ./gradlew test -Denv=pro -Dthreads=1 -Dbrowser=chrome -Dchromeoptions.args='--headless, --disable-gpu, --no-sandbox'
 ```
 Running with filter by test with headless mode, for example:
 ```sh
-$ ./gradlew test -Denv=pro -Dthreads=2 -Dbrowser=chrome -Dchromeoptions.args='--headless, --disable-gpu, --no-sandbox' --tests '*chatsMusicAttachmentsCheckPositive*'
+$ ./gradlew test -Denv=pro -Dthreads=1 -Dbrowser=chrome -Dchromeoptions.args='--headless, --disable-gpu, --no-sandbox' --tests '*chatsMusicAttachmentsCheckPositive*'
 ```
 
 ### Reporting
